@@ -1,0 +1,190 @@
+:root {
+  --text-normal: 500;
+  --text-bold: 700;
+
+  --gray-color: #4f4f4f;
+  --gray-fade: #828282;
+
+  --gray-hover-color: #363636;
+
+  --grey-accent: #333333;
+
+  --black-text: #000000;
+  --border-color: #f7df94;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  line-height: 120%;
+}
+
+.hide {
+  opacity: 0;
+
+  transition: opacity 0.2s ease-in;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+#random__generator {
+  width: 100%;
+
+  padding: 31px 0;
+  display: flex;
+  justify-content: flex-end;
+
+  margin-bottom: 17px;
+}
+
+#random__generator--button {
+  outline: none;
+  border: none;
+  background: none;
+
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--gray-color);
+
+  display: flex;
+  margin-right: 100px;
+}
+
+#random__generator--button:hover {
+  color: var(--gray-hover-color);
+}
+
+#random__generator--button span {
+  margin-left: 8px;
+}
+
+#content {
+  width: 100%;
+  padding: 0 24px;
+  padding-bottom: 100px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.quote__container {
+  width: 100%;
+  max-width: 800px;
+}
+
+#quotes__author {
+  padding-left: 100px;
+  margin-bottom: 140px;
+}
+
+#quotes__author h1 {
+  font-weight: var(--text-bold);
+  color: var(--grey-accent);
+}
+
+.quote__text {
+  margin-bottom: 109px;
+}
+
+.quote__text p {
+  color: var(--black-text);
+  font-size: 2.25em;
+  padding-left: 100px;
+
+  border-left: 8px solid var(--border-color);
+}
+
+#quote__author--card {
+  max-width: 672px;
+
+  padding: 50px 29px;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: background 0.2s ease-in;
+  cursor: pointer;
+}
+
+#quote__author--card span {
+  opacity: 0;
+
+  transition: opacity 0.2s ease-in;
+}
+
+#quote__author--card:hover {
+  background: var(--grey-accent);
+}
+
+#quote__author--card:hover span {
+  color: white;
+}
+
+#quote__author--card:hover span {
+  opacity: 1;
+}
+
+#quote__author--card:hover #quote__author--info h3 {
+  color: white;
+}
+
+#quote__author--info h3 {
+  font-size: 1.5em;
+  color: var(--gray-color);
+  font-weight: var(--text-bold);
+  padding-bottom: 8px;
+}
+
+#quote__author--info p {
+  color: var(--gray-fade);
+  font-size: 0.8em;
+}
+
+#spinner {
+  margin: auto;
+  padding-bottom: 88px;
+}
+
+@media screen and (max-width: 800px) {
+  #random__generator--button {
+    margin-right: 20px;
+  }
+  .quote__text p {
+    font-size: 1.8em;
+    padding-left: 50px;
+  }
+}
